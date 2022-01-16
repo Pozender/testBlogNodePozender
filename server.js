@@ -23,6 +23,6 @@ app.get("/", async (req, res) => {
   res.render("index", { articles: articles });
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Ton serv marche: http://localhost:5000");
 });
