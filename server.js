@@ -18,7 +18,7 @@ app.use(methodOverride("_method"));
 app.use("/articles", articleRouter);
 
 app.get("/", async (req, res) => {
-  let articles = await Article.find().sort({ date: "desc" });
+  let articles = await Article.find().sort({ date: "-1" });
 
   res.render("index", { articles: articles });
 });
